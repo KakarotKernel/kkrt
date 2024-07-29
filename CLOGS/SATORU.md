@@ -1,15 +1,23 @@
 # Changelog
 
-## Version [SATORU S1] - July 27, 2024
+## Version [SATORU S1] - July 29, 2024
 
 ### Fixed
 - **WiFi Issues**: Resolved connectivity problems affecting wifi to lost the connection.
 - **GPU**: Improved GPU performance for smoother graphical experiences.
-- **Deep sleep**: Fixed the issue of *MUICHIRO-M1*, which was stopping the device to go deepsleep.
 - **CPU**: Fixed abnormal power consumption.
 
 ### New / Extras
+- **Upstreamed**: upstreamed to openela version 4.14.339
 - **Thermals**: Tons of Thermal enhancements
+- **QPR(3&2)**: Merged with QPR2-3 Patches
+- **Unused functions**: Removed unused fucntions
+- **Governor**: Improved schedutil governor
+- **Warnings**: Fixed source build warnings
+- **Simple_LMK**: added some changes to improve
+- **Block-Cfq-iosched**: Ported samsung optimizations from SM-N986B
+- **KSU** : Kernel is built with `KernelSU`
+- **MISC** : And many underthehood changes to the source and the build script
 
 ## How to flash
 
