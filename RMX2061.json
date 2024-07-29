@@ -1,0 +1,13 @@
+{
+  "kernel": {
+    "name": "KKRT-SATORU-S1-RMX2061",
+    "version": "SATORU",
+    "link": "https://github.com/KakarotKernel/kkrt/releases/download/4/KKRT-KSU-SATORU-RMX2061.zip",
+    "changelog_url": "https://github.com/KakarotKernel/kkrt/blob/main/CLOGS/SATORU.md",
+    "date": "2024-07-29",
+    "sha1": "203296ccffbdcdda381e7d0cc2bd67001ba5357c"
+  },
+  "support": {
+    "link": "https://t.me/neelscosmos"
+  }
+}

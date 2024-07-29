@@ -1,0 +1,6 @@
+Last updated on JUL 12 7:19 PM IST
+--
+* Thermal performance improvements
+* Add tfa9894 sound amplifier driver
+* Tune schedutil ratelimits
+* Some under-the-hood changes
