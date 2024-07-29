@@ -1,0 +1,203 @@
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: #222;
+}
+
+h2 {
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+h3 {
+  margin: 1.5rem 0;
+  color: #000;
+  font-size: 0.875em;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+  color: #000;
+  font-size: 0.875em;
+  text-align: left;
+}
+
+th {
+  width: 50%;
+  color: #999;
+  font-size: 0.75em;
+}
+
+
+.button {
+  display: block;
+  padding: 1em;
+  margin-top: 0.75rem;
+  color: inherit;
+  font-size: 0.8125em;
+  text-align: center;
+  text-decoration: none;
+  background-color: currentColor;
+  border-radius: 3em;
+  transition: box-shadow 200ms;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 1rem 2rem rgba(0,0,0,0.15);
+}
+
+.button.alt {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.button.alt:hover {
+  box-shadow: inset 0 0 0 0.125rem;
+}
+
+.button span { color: #fff; }
+
+.slider-wrap {
+  position: relative;
+  max-width: 300px;
+  margin: 4rem auto 2rem;
+  box-shadow: 0 1.5rem 3rem -1rem rgba(0,0,0,0.8);
+}
+
+.logo {
+  position: absolute;
+  z-index: 100;
+  max-width: 40%;
+  margin: -2.25rem 30% 0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 40%;
+  transform-origin: 0 0;
+  transform: skewY(-15deg);
+  color: inherit;
+  background-color: currentColor;
+  background-image: radial-gradient(rgba(255,255,255,0.3) 20%, rgba(0,0,0,0.3));
+  transition: color 500ms;
+}
+
+.slider-controls {
+  position: absolute;
+  z-index: 100;
+  top: 48%;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+.slider-controls a {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.slider-controls a.active {
+  background-color: #999;
+}
+
+.slider-items-wrap {
+  position: relative;
+  z-index: 10;
+  display: table;
+  width: 500%;
+  table-layout: fixed;
+  transition: transform 500ms;
+}
+
+.slider-item {
+  display: table-cell;
+  width: 100%;
+  padding: 3rem 3rem 2.5rem;
+}
+
+.slider-item img {
+  display: block;
+  max-width: calc(100% + 2rem);
+  margin: 0 -1rem 2.5rem;
+}
+
+/* Popup Container */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup Content */
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Base styling for images */
+.slider-item img {
+  display: block;
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images cover the box without stretching */
+  margin: 0 auto; /* Center image horizontally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .slider-item img {
+    max-height: 350px; /* Adjust height for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-item img {
+    max-height: 250px; /* Adjust height for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-item img {
+    max-height: 200px; /* Adjust height for smaller screens */
+  }
+}
