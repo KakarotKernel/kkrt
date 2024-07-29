@@ -1,6 +1,18 @@
-Last updated on JUL 12 7:19 PM IST
+Last updated on JULY 29, 2024
 --
-* Thermal performance improvements
-* Add tfa9894 sound amplifier driver
-* Tune schedutil ratelimits
-* Some under-the-hood changes
+*** Fixed
+* WiFi Issues: Resolved connectivity problems affecting wifi to lost the connection.
+* GPU: Improved GPU performance for smoother graphical experiences.
+* CPU: Fixed abnormal power consumption.
+
+*** New / Extras
+* Upstreamed: upstreamed to openela version 4.14.339
+* Thermals: Tons of Thermal enhancements
+* QPR(3&2): Merged with QPR2-3 Patches
+* Unused functions: Removed unused fucntions
+* Governor: Improved schedutil governor
+* Warnings: Fixed source build warnings
+* Simple_LMK: added some changes to improve
+* Block-Cfq-iosched: Ported samsung optimizations from SM-N986B
+* KSU : Kernel is built with KernelSU
+* MISC : And many underthehood changes to the source and the build script
