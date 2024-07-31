@@ -1,13 +1,13 @@
 var slider = $('.slider'),
-    sliderControls = $('.slider-controls'),
-    sliderItemsWrap = slider.children('.slider-items-wrap'),
-    sliderItems = sliderItemsWrap.children('.slider-item'),
-    sliderItemsLength = sliderItems.length;
+  sliderControls = $('.slider-controls'),
+  sliderItemsWrap = slider.children('.slider-items-wrap'),
+  sliderItems = sliderItemsWrap.children('.slider-item'),
+  sliderItemsLength = sliderItems.length;
 
 if (slider) {
-  var autoSlide = setInterval(function() {
+  var autoSlide = setInterval(function () {
     var activeItem = sliderControls.find('.active'),
-        sliderItemsLength = sliderControls.find('a').length;
+      sliderItemsLength = sliderControls.find('a').length;
 
     if (activeItem.index() !== sliderItemsLength - 1) {
       activeItem.next().trigger('click');
@@ -18,14 +18,14 @@ if (slider) {
   }, 5000);
 }
 
-sliderControls.on('click', 'a', function(e) {
+sliderControls.on('click', 'a', function (e) {
   var self = $(this),
-      index = self.index(),
-      newColor = sliderItems.eq(index).css('color');
+    index = self.index(),
+    newColor = sliderItems.eq(index).css('color');
 
   if (!e.isTrigger) clearInterval(autoSlide);
   self.addClass('active').siblings().removeClass('active');
-  
+
   slider.css('color', newColor);
 
   sliderItemsWrap.css({
@@ -34,28 +34,27 @@ sliderControls.on('click', 'a', function(e) {
   });
 });
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.getElementById('changelog-popup');
-    const openPopupButton = document.getElementById('open-changelog');
-    const closePopupButton = document.querySelector('.popup-close');
+document.addEventListener('DOMContentLoaded', function () {
+  const popup = document.getElementById('changelog-popup');
+  const openPopupButton = document.getElementById('open-changelog');
+  const closePopupButton = document.querySelector('.popup-close');
 
-    // Open popup
-    openPopupButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      popup.style.display = 'flex';
-    });
-
-    // Close popup
-    closePopupButton.addEventListener('click', function() {
-      popup.style.display = 'none';
-    });
-
-    // Close popup when clicking outside of it
-    window.addEventListener('click', function(e) {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
-    });
+  // Open popup
+  openPopupButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    popup.style.display = 'flex';
   });
-</script>
+
+  // Close popup
+  closePopupButton.addEventListener('click', function () {
+    popup.style.display = 'none';
+  });
+
+  // Close popup when clicking outside of it
+  window.addEventListener('click', function (e) {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
+
